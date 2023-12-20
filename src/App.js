@@ -56,8 +56,8 @@ const App = () => {
 
     totalHours %= 24;
 
-    const formattedHours = String(totalHours).padStart(2, "0");
-    const formattedMinutes = String(totalMinutes).padStart(2, "0");
+    const formattedHours = totalHours < 10 ? '0' + totalHours : String(totalHours);
+    const formattedMinutes = totalMinutes < 10 ? '0' + totalMinutes : String(totalMinutes);
 
     return `${formattedHours}:${formattedMinutes}`;
   };
